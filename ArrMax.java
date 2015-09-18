@@ -8,8 +8,9 @@ public class ArrMax
 		int[] arr = new int[]{1,4,125,3,6,8,28};
 		int a = comp(arr);
 		int b = getMin(arr);
-		System.out.println("Max is "+a);
-		System.out.println("Min is "+b);
+		//double c = comp(arr);
+	   System.out.println("Max is "+a);
+	   System.out.println("Min is "+b);
 		
 	}
 	
@@ -40,4 +41,11 @@ public class ArrMax
 		}
 		return arr[min]; // return the number corresponds to the index
 	}
+	
+	/*override, since same function with comp, but diff type of return value
+	public static double comp(double[] arr)
+	{
+		
+	}
+	*/
 }
