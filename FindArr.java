@@ -9,6 +9,8 @@ class FindArr
 		System.out.println("index is "+b);
 		int c = halfSearch_2(arr,7);
 		System.out.println("index is "+c);
+		int d = getIndex(arr,6);
+		System.out.println("index is "+d);
 	}
 	public static int search(int[] arr,int a)
 	{
@@ -58,9 +60,29 @@ class FindArr
 			else if(key<arr[mid])
 				max = mid -1;
 			else
-				return mid;
+				return mid; 
 			
 		}
 			return -1;
+	}
+	// insert a number to array to ensure array still in order
+	public static int getIndex(int[] arr, int key)
+	{
+		int min = 0;
+		int max = arr.length - 1;
+		int mid = (min + max)/2;
+		
+		while(min<=max)
+		{
+			mid = (max+min)>>1;// divided by 2
+			if(key>arr[mid])
+				min = mid+1;
+			else if(key<arr[mid])
+				max = mid -1;
+			else
+				return mid;
+			
+		}
+				return min; // if not found, return to min
 	}
 }
