@@ -1,4 +1,4 @@
-public class Arr
+public class ArrMax
 {
 	public static void main(String[] args)
 	{

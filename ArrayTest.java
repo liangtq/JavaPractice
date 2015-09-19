@@ -15,13 +15,16 @@ class ArrayTest
 	
 	public static void sort(int[] arr)
 	{
+		/*
+		After inner loop sorted, the Max/Min appears at index 0 of array
+		*/
 		//int min = 0;
 		int temp;
 		for(int a=0;a<arr.length-1;a++)
 		{
 			for(int b=a+1;b<arr.length;b++)	
 			{
-				if (arr[a]>arr[b])
+				if (arr[a]>arr[b]) // change > to <, to change the order
 				{
 					temp =arr[b];
 					arr[b]=arr[a];
