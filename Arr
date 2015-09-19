@@ -1,4 +1,0 @@
-class Arr
-{
-	public static void
-}
