@@ -22,9 +22,11 @@ public class SortArr
 			{									//每次从0开始比，所以b=0 always begin with 0
 				if(arr[b+1]<arr[b])
 				{
-					temp=arr[b];
+					/*temp=arr[b];
 					arr[b]=arr[b+1];
-					arr[b+1]=temp;	
+					arr[b+1]=temp;
+					*/
+					PosChange(b,b+1,arr);
 				}
 			}
 			}
@@ -43,5 +45,12 @@ public class SortArr
 			System.out.println(arr[a]+"]");
 			}
 		}
+	}
+	
+	public static void PosChange(int a, int b,int[] arr)
+	{
+			int temp=arr[b];
+			arr[b]=arr[a];
+			arr[a]=temp;
 	}
 }
